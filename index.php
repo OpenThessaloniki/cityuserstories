@@ -8,7 +8,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Αιτήματα για την <?php echo $cityname; ?></title>
+    <title>"Ιστορίες Χρήσης" για την <?php echo $cityname; ?></title>
 	<style>
 		.highlight {
 			background-color: #eee;
@@ -17,20 +17,20 @@
 	</style>
 </head>
 <body>
-	<h1>Αιτήματα για την <?php echo $cityname; ?></h1>
+	<h1>"Ιστορίες Χρήσης" για την <?php echo $cityname; ?></h1>
 	<form method="post" action="exportcsv.php" target="_self">
         <input type="submit" value="Εξαγωγή σε CSV"/>
     </form>
 	<form method="POST" action="submit.php"  target="_self">
 		<h2><label for="text">Ως...</label></h2>
 		<input type="text" id="asa" name="asa" required><br>
-		<p><i>(Οδηγός: εδώ περιγράφεται ο ρόλος - π.χ. ως δημότης, ως οδηγός, ως πεζός, ως ΑΜΕΑ, κ.ο.κ. -)</i></p>
+		<p><i>(<u>Οδηγίες συμπλήρωσης</u>: εδώ περιγράφεται ο ρόλος - π.χ. ως δημότης, ως οδηγός, ως πεζός, ως ΑΜΕΑ, κ.ο.κ. -)</i></p>
 		<h2><label>θα ήθελα...</label></h2>
 		<textarea id="iwant" name="iwant" rows="3" cols="50" required></textarea><br>
-		<p><i>(Οδηγός: εδώ περιγράφεται το αίτημα - π.χ. θα ήθελα περισσότερα αστικά λεωφορεία, καλύτερη φροντίδα των δρόμων, κ.ο.κ. -)</i></p>
+		<p><i>(<u>Οδηγίες συμπλήρωσης</u>: εδώ περιγράφεται το αίτημα - π.χ. θα ήθελα περισσότερα αστικά λεωφορεία, καλύτερη φροντίδα των δρόμων, κ.ο.κ. -)</i></p>
 		<h2><label>ώστε...</label></h2>
 		<textarea id="sothat" name="sothat" rows="3" cols="50" required></textarea><br>
-		<p><i>(Οδηγός: εδώ περιγράφεται το αποτέλεσμα - π.χ. να μετακινούμαι ταχύτερα / ασφαλέστερα, να μην ταλαιπωρείται το αυτοκίνητό μου κ.ο.κ. -)</i></p>
+		<p><i>(<u>Οδηγίες συμπλήρωσης</u>: εδώ περιγράφεται το αποτέλεσμα - π.χ. να μετακινούμαι ταχύτερα / ασφαλέστερα, να μην ταλαιπωρείται το αυτοκίνητό μου κ.ο.κ. -)</i></p>
 		<input type="submit" value="ΑΠΟΣΤΟΛΗ"><br><br>
 	</form>
 	<hr>

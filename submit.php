@@ -2,17 +2,23 @@
 
 include('config.php');
 $conn = new mysqli($servername, $username, $password, $dbname);
+$conn->set_charset('utf8');
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-}
+} 
+
 if(isset($_POST["asa"]) && isset($_POST["iwant"]) && isset($_POST["sothat"])) {
-    $sql = "INSERT INTO stories (asauser, iwant, sothat) VALUES ('" . $_POST["asa"] . "','" . $_POST["iwant"] . "','" . $_POST["sothat"] . "');";
-    if ($conn->query($sql) === TRUE) {
-        header('Location: ' . $home_dir);
+    if($_POST["asa"]!="" && $_POST["iwant"]!="" && $_POST["sothat"]!="") {
+        $dt = new DateTime();
+        $sql = "INSERT INTO stories (asauser, iwant, sothat, timestamp, moderation) VALUES ('" . $_POST["asa"] . "','" . $_POST["iwant"] . "','" . $_POST["sothat"] . "','" . $dt->format('Y-m-d H:i:s') . "','" . 'no' . "');";
+        if ($conn->query($sql) === TRUE) {
+            header('Location: ' . $home_dir);
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        header('Location: ' . $home_dir);
     }
 }
-
 ?>

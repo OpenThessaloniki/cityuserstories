@@ -12,6 +12,6 @@ __Ως__ οδηγός
 __θα ήθελα__ πιο προσεγμένους δρόμους
 __ώστε__ το αυτοκίνητό μου να έχει μικρότερες φθορές
 
-# Αναφορές
+## Αναφορές
 
-[User Story (Wikipedia)](https://en.wikipedia.org/wiki/User_story)
+- [User Story (Wikipedia)](https://en.wikipedia.org/wiki/User_story)
